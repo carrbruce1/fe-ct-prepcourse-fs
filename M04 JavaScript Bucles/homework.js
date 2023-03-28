@@ -54,7 +54,7 @@ function saludo(idioma) {
    // Si "idioma" es "ingles", devuelve "Hello!".
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
-   if(idioma == "aleman"){
+   /*if(idioma == "aleman"){
       return "Guten Tag!";
    }
    else if(idioma == "mandarin"){
@@ -65,6 +65,19 @@ function saludo(idioma) {
    }
    else{
       return "undefined";
+   }*/
+   switch(idioma){
+      case "aleman":
+         return "Guten Tag!";
+         break;
+      case "mandarin":
+         return "Ni Hao!";
+         break;
+      case "ingles":
+         return "Hello!";
+         break;
+      default:
+         return "undefined";
    }
 }
 
@@ -140,6 +153,18 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
+   if(num % 3 === 0 && num % 5 === 0){
+      return "fizzbuzz";
+   }
+   else if(num % 3 === 0){
+      return "fizz";
+   }
+   else if(num % 5 === 0){
+      return("buzz");
+   }
+   else{
+      return false;
+   }
    
 }
 
@@ -210,14 +235,12 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   let i = 5;
-
-   do{
-      num = num + 1;
-      resu = num + i;
-
-   }while(num <= 8);
-   return resu;
+  let i = 0;
+  do{
+      num = num +5;
+      i = i + 1;
+  }while(i < 8);
+  return num;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
